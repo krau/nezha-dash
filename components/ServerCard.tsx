@@ -31,17 +31,17 @@ export default function ServerCard({
           <section className={"flex items-center justify-start gap-2 lg:w-28"}>
             {showFlag ? (
               country_code ? (
-                <span className="text-[12px] text-muted-foreground">
+                <span className="text-[16px] text-muted-foreground">
                   {getUnicodeFlagIcon(country_code)}
                 </span>
               ) : (
-                <span className="text-[12px] text-muted-foreground">🏁</span>
+                <span className="text-[16px] text-muted-foreground">🏁</span>
               )
             ) : null}
             <p
               className={cn(
                 "break-all font-bold tracking-tight",
-                showFlag ? "text-xs" : "text-sm",
+                showFlag ? "text-lg" : "text-base",
               )}
             >
               {name}
@@ -56,38 +56,35 @@ export default function ServerCard({
       <section className={"grid grid-cols-5 items-center gap-3"}>
         <div className={"flex flex-col"}>
           <p className="text-xs text-muted-foreground">CPU</p>
-          <div className="text-xs font-semibold flex items-center">
-            {cpu.toFixed(2)}
-            %
+          <div className="flex items-center text-lg font-semibold">
+            {cpu.toFixed(2)}%
           </div>
           <ServerUsageBar value={cpu} />
         </div>
         <div className={"flex flex-col"}>
-          <p className="text-xs text-muted-foreground">Mem</p>
-          <div className="text-xs font-semibold flex items-center">
-            {mem.toFixed(2)}
-            %
+          <p className="text-xs text-muted-foreground">内存</p>
+          <div className="flex items-center text-lg font-semibold">
+            {mem.toFixed(2)}%
           </div>
           <ServerUsageBar value={mem} />
         </div>
         <div className={"flex flex-col"}>
-          <p className="text-xs text-muted-foreground">STG</p>
-          <div className="text-xs font-semibold flex items-center">
-            {stg.toFixed(2)}
-            %
+          <p className="text-xs text-muted-foreground">存储</p>
+          <div className="flex items-center text-lg font-semibold">
+            {stg.toFixed(2)}%
           </div>
           <ServerUsageBar value={stg} />
         </div>
         <div className={"flex flex-col"}>
-          <p className="text-xs text-muted-foreground">Upload</p>
-          <div className="text-xs font-semibold flex items-center">
+          <p className="text-xs text-muted-foreground">上传</p>
+          <div className="flex items-center text-lg font-semibold">
             {up.toFixed(2)}
             Mb/s
           </div>
         </div>
         <div className={"flex flex-col"}>
-          <p className="text-xs text-muted-foreground">Download</p>
-          <div className="text-xs font-semibold flex items-center">
+          <p className="text-xs text-muted-foreground">下载</p>
+          <div className="flex items-center text-lg font-semibold">
             {down.toFixed(2)}
             Mb/s
           </div>

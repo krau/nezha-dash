@@ -8,7 +8,7 @@ import { ModeToggle } from "@/components/ThemeSwitcher";
 
 function Header() {
   return (
-    <div className="mx-auto w-full max-w-5xl">
+    <div className="mx-auto w-full max-w-7xl">
       <section className="flex items-center justify-between">
         <section className="text-md flex items-center font-medium">
           <div className="mr-1 flex flex-row items-center justify-start">
@@ -27,7 +27,7 @@ function Header() {
             className="mx-2 hidden h-4 w-[1px] md:block"
           />
           <p className="hidden text-sm font-medium opacity-40 md:block">
-            Simple and beautiful dashboard
+            今天哪台服务器炸了
           </p>
         </section>
         <ModeToggle />
@@ -72,9 +72,9 @@ function Overview() {
 
   return (
     <section className={"mt-10 flex flex-col md:mt-16"}>
-      <p className="text-md font-semibold">👋 Overview</p>
+      <p className="text-lg font-semibold">{"Ciallo～(∠・ω< )"}</p>
       <div className="flex items-center gap-1.5">
-        <p className="text-sm font-medium opacity-50">where the time is</p>
+        <p className="text-base font-medium opacity-50">where the time is</p>
         {mouted && (
           <p className="opacity-1 text-sm font-medium">{timeString}</p>
         )}

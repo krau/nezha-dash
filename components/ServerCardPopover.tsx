@@ -14,11 +14,11 @@ export function ServerCardPopoverCard({
 }) {
   return (
     <div className={cn("mb-[6px] flex w-full flex-col", className)}>
-      <div className="text-sm font-semibold">{title}</div>
+      <div className="text-base font-semibold">{title}</div>
       {children ? (
         children
       ) : (
-        <div className="break-all text-xs font-medium">{content}</div>
+        <div className="break-all text-base font-medium">{content}</div>
       )}
     </div>
   );
